@@ -1,0 +1,100 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #f6f1e9;
+  --color-card: #fffaf2;
+  --color-sand: #efe4d3;
+  --color-line: #e3d8c7;
+  --color-ink: #2b2620;
+  --color-muted: #70655a;
+  --color-timber: #b07a46;
+  --color-timber-dark: #8a5a2e;
+  --color-rust: #b4532a;
+  --color-iron: #34322f;
+  --color-moss: #5d6e4c;
+  --font-serif: 'Fraunces Variable', Georgia, serif;
+  --font-sans: 'Inter Variable', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  background: var(--color-paper);
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+h1, h2, h3, .serif {
+  font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
+}
+:focus-visible {
+  outline: 2px solid var(--color-rust);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.fade-up {
+  animation: fadeUp 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-up { animation: none; }
+  * { transition: none !important; }
+}
+
+.studio {
+  background:
+    radial-gradient(120% 90% at 50% 15%, #fffaf2 0%, #f1e6d4 55%, #e6d6bf 100%);
+}
+.paper-grid {
+  background-color: #fbf7f0;
+  background-image: linear-gradient(#efe6d8 1px, transparent 1px), linear-gradient(90deg, #efe6d8 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+/* Tick boxes */
+.tick {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: none;
+  border: 2px solid #b9a88f;
+  border-radius: 0.45rem;
+  background: #fffaf2;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+.tick:active { transform: scale(0.92); }
+.tick::after {
+  content: '';
+  width: 0.45rem;
+  height: 0.8rem;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg) translate(-1px, -1px) scale(0);
+  transition: transform 0.15s;
+}
+.tick:checked { background: var(--color-moss); border-color: var(--color-moss); }
+.tick:checked::after { transform: rotate(45deg) translate(-1px, -1px) scale(1); }
+
+input[type='range'] { accent-color: var(--color-rust); }
+
+@media print {
+  .no-print { display: none !important; }
+  body, html { background: #fff; }
+  .print-break { break-before: page; }
+  .avoid-break { break-inside: avoid; }
+  @page { margin: 12mm; }
+}

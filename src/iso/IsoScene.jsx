@@ -205,7 +205,7 @@ function Annotations({ items, id, fs }) {
       return (
         <g key={i} stroke="#3a332c" fill="#3a332c">
           <line x1={x0} y1={y0} x2={x1} y2={y1} strokeWidth="1" vectorEffect="non-scaling-stroke" markerStart={`url(#${id}-tick)`} markerEnd={`url(#${id}-tick)`} />
-          <text x={(x0 + x1) / 2} y={(y0 + y1) / 2 - fs * 0.4} fontSize={fs * 0.9} textAnchor="middle" stroke="none" fontFamily="Inter Variable, sans-serif" fontWeight="600">{a.label}</text>
+          <text x={(x0 + x1) / 2} y={(y0 + y1) / 2 - fs * 0.4} fontSize={fs * 0.9} textAnchor="middle" stroke="none" fontFamily="Geist Variable, sans-serif" fontWeight="600">{a.label}</text>
         </g>
       )
     }
@@ -222,7 +222,7 @@ function Label({ x, y, text, fs, dx = 1, dy = -1 }) {
     <g>
       <line x1={x} y1={y} x2={lx} y2={ly} stroke="#3a332c" strokeWidth="1" vectorEffect="non-scaling-stroke" />
       <rect x={anchorLeft ? lx : lx - w} y={ly - fs * 0.8} width={w} height={fs * 1.6} rx={fs * 0.5} fill="#fffaf2" stroke="#3a332c" strokeOpacity="0.35" vectorEffect="non-scaling-stroke" />
-      <text x={anchorLeft ? lx + fs * 0.45 : lx - fs * 0.45} y={ly + fs * 0.32} fontSize={fs * 0.9} textAnchor={anchorLeft ? 'start' : 'end'} fill="#2b2620" fontFamily="Inter Variable, sans-serif" fontWeight="600">{text}</text>
+      <text x={anchorLeft ? lx + fs * 0.45 : lx - fs * 0.45} y={ly + fs * 0.32} fontSize={fs * 0.9} textAnchor={anchorLeft ? 'start' : 'end'} fill="#2b2620" fontFamily="Geist Variable, sans-serif" fontWeight="600">{text}</text>
     </g>
   )
 }

@@ -70,7 +70,7 @@ export default function Ortho({ boxes, view = 'front', extraDims = [], className
           <line x1="0" y1="0" x2="0" y2="24" stroke="#8a6a48" strokeOpacity=".18" strokeWidth="4" />
         </pattern>
       </defs>
-      <style>{`.ext{stroke:#3a332c;stroke-opacity:.45;vector-effect:non-scaling-stroke;stroke-width:.8}.dim{stroke:#3a332c;vector-effect:non-scaling-stroke;stroke-width:1}text{font-family:Inter Variable,sans-serif;font-weight:600;fill:#2b2620}`}</style>
+      <style>{`.ext{stroke:#3a332c;stroke-opacity:.45;vector-effect:non-scaling-stroke;stroke-width:.8}.dim{stroke:#3a332c;vector-effect:non-scaling-stroke;stroke-width:1}text{font-family:Geist Variable,sans-serif;font-weight:600;fill:#2b2620}`}</style>
       <text x={u0} y={v0 - fs * 1.1} fontSize={fs * 0.95} style={{ fontFamily: 'Fraunces Variable, serif', fontWeight: 600 }}>{V.title}</text>
       {list.map(({ b, u, v }, i) => (
         <g key={i}>

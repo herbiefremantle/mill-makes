@@ -83,7 +83,7 @@ function Bar({ bin, parts, kind, index, scale }) {
               <g key={`${i}-${j}`}>
                 <rect x={x} y={y} width={w} height={h} fill={partColour(parts, pc.code)} stroke="#5a3c22" strokeWidth="0.8" />
                 {w > 30 && (
-                  <text x={x + w / 2} y={y + h / 2 + fs * 0.35} fontSize={fs} textAnchor="middle" fontWeight="700" fill="#2b2620" fontFamily="Inter Variable, sans-serif">
+                  <text x={x + w / 2} y={y + h / 2 + fs * 0.35} fontSize={fs} textAnchor="middle" fontWeight="700" fill="#2b2620" fontFamily="Geist Variable, sans-serif">
                     {pc.code}
                     {w > 150 && h > 50 ? ` ${it.length}` : ''}
                   </text>

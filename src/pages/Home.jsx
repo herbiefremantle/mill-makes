@@ -22,7 +22,7 @@ export default function Home() {
         <h1 className="text-[2.4rem] leading-[1.05] font-semibold mt-2">
           Furniture for
           <br />
-          <em className="font-normal">the mill.</em>
+          <span className="text-timber-dark">the mill.</span>
         </h1>
         <p className="text-muted mt-3 max-w-md">Step-by-step guides written for a first-time builder. Plain English, metric sizes, UK suppliers and prices.</p>
       </header>

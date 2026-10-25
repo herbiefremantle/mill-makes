@@ -71,7 +71,7 @@ export default function Ortho({ boxes, view = 'front', extraDims = [], className
         </pattern>
       </defs>
       <style>{`.ext{stroke:#3a332c;stroke-opacity:.45;vector-effect:non-scaling-stroke;stroke-width:.8}.dim{stroke:#3a332c;vector-effect:non-scaling-stroke;stroke-width:1}text{font-family:Geist Variable,sans-serif;font-weight:600;fill:#2b2620}`}</style>
-      <text x={u0} y={v0 - fs * 1.1} fontSize={fs * 0.95} style={{ fontFamily: 'Fraunces Variable, serif', fontWeight: 600 }}>{V.title}</text>
+      <text x={u0} y={v0 - fs * 1.1} fontSize={fs * 0.95} style={{ fontFamily: 'Geist Variable, sans-serif', fontWeight: 600 }}>{V.title}</text>
       {list.map(({ b, u, v }, i) => (
         <g key={i}>
           <rect x={u[0]} y={v[0]} width={u[1] - u[0]} height={v[1] - v[0]} fill={FILL[b.mat] || '#ddd'} stroke="#3a2a1a" strokeWidth="0.9" vectorEffect="non-scaling-stroke" />

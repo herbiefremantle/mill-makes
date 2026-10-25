@@ -1,12 +1,12 @@
 # Mill Makes
 
-Step-by-step build guides for nine pieces of rustic industrial furniture made from reclaimed scaffold boards: a sideboard, a bookcase, a 4 × 4 cube shelf, a kitchen unit (tea station), a chunky trestle table, and four easy builds (hall bench, shoe rack console, wall shelves and a planter box) for the common areas of a converted mill.
+Step-by-step build guides for 19 pieces of rustic industrial furniture made from reclaimed scaffold boards: a sideboard, a bookcase, a 4 × 4 cube shelf, a kitchen unit (tea station), a chunky trestle table, a hall bench, shoe rack console, wall shelves, planter box, coffee table, side table, coat rack, storage crates, tiered plant stand, log & magazine rack, headboard, TV & media unit, desk and a bar-height table for the common areas of a converted mill.
 
 Mobile-first, works offline once installed (PWA), UK prices in £, metric sizes.
 
 ## What's in it
 
-- **Home**: nine project cards with progress, filterable by difficulty.
+- **Home**: 19 project cards with progress, filterable by difficulty.
 - **Finish looks**: natural oiled, antique dark (walnut tint) or weathered grey. The illustrations, finishing steps and shopping list change to match.
 - **Seven tabs per project**: Overview, What to find, Tools, Cut list, Build steps, Finish, Safety.
 - **Customise**: change width, depth, height (and number of shelves on the bookcase). The cut list, cutting plan, board count, price and every illustration recalculate.
@@ -65,12 +65,22 @@ Each project has photo slots in `public/images/<project>/`:
 | `shoe-rack` | `hero.jpg`, `detail-edge.jpg` |
 | `shelves` | `hero.jpg`, `detail-bracket.jpg` |
 | `planter` | `hero.jpg`, `detail-cap.jpg` |
+| `coffee-table` | `hero.jpg`, `detail-top.jpg` |
+| `side-table` | `hero.jpg`, `detail-corner.jpg` |
+| `coat-rack` | `hero.jpg`, `detail-hook.jpg` |
+| `crates` | `hero.jpg`, `detail-crate.jpg` |
+| `plant-stand` | `hero.jpg`, `detail-tier.jpg` |
+| `log-rack` | `hero.jpg`, `detail-logs.jpg` |
+| `headboard` | `hero.jpg`, `detail-cap.jpg` |
+| `tv-unit` | `hero.jpg`, `detail-bay.jpg` |
+| `desk` | `hero.jpg`, `detail-shelf.jpg` |
+| `bar-table` | `hero.jpg`, `detail-footrest.jpg` |
 
 Until a file exists, the app shows an illustration, the file name, and the exact AI image prompt (with a copy button). The prompts are also in `public/images/<project>/PROMPTS.md`. Use JPGs about 1600px wide at 4:3. If you change the prompts in `src/data/*.js`, run `npm run prompts` to rewrite the PROMPTS.md files.
 
 ## How it's built
 
-- `src/data/sideboard.js`, `bookcase.js`, `cubes.js`, `kitchen.js`, `table.js`, `bench.js`, `shoerack.js`, `shelves.js`, `planter.js` (with shared preparation steps in `prep.js`): each project as a 3D model (one box per real piece of wood) worked out from the chosen size, plus its steps, fixings, tools, finish and safety notes.
+- `src/data/sideboard.js`, `bookcase.js`, `cubes.js`, `kitchen.js`, `table.js`, `bench.js`, `shoerack.js`, `shelves.js`, `planter.js` and one file per further project (with shared preparation steps in `prep.js` and shared parts in `parts.js`): each project as a 3D model (one box per real piece of wood) worked out from the chosen size, plus its steps, fixings, tools, finish and safety notes.
 - `src/lib/geometry.js`: boards, panels, cut-list grouping, surface area and weight.
 - `src/lib/cutting.js`: the cutting optimiser (rips narrow pieces side by side, then first-fit-decreasing onto stock lengths, swapping to cheaper 2.4m boards where they fit).
 - `src/lib/project.js`: shopping list and pricing (oil and sandpaper from surface area, screws by pack).

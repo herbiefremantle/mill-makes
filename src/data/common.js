@@ -17,6 +17,8 @@ export const PRICES = {
   shelfBracket: { name: 'Black steel scaffold-board shelf brackets', spec: 'Pair, sized for 225mm boards', pack: 2, lo: 10, hi: 20, where: 'Amazon UK, Etsy, ironmongers', cat: 'Hardware' },
   wallFix: { name: 'Wall plugs and 5.0 × 70mm screws', spec: 'Pack, brown plugs for brick or block', lo: 4, hi: 7, where: 'Screwfix, Toolstation', cat: 'Fixings' },
   trough: { name: 'Plastic plant trough insert', spec: 'About 400 × 200 × 180mm, with saucer', pack: 1, lo: 6, hi: 12, where: 'Garden centres, B&Q, Dunelm', cat: 'Hardware' },
+  coatHook: { name: 'Black cast-iron coat hook', spec: 'Each, with screws', lo: 3, hi: 6, where: 'Screwfix, Toolstation, Amazon UK', cat: 'Hardware' },
+  wallFixLong: { name: 'Wall plugs and 6.0 × 100mm screws', spec: 'Pack, for fixing battens to brick or block', lo: 5, hi: 8, where: 'Screwfix, Toolstation', cat: 'Fixings' },
   screw30: { name: 'Black pan-head screws 4.0 × 30mm', spec: 'Box of 100 (for hinges and handles)', pack: 100, lo: 4, hi: 7, where: 'Screwfix, Toolstation', cat: 'Fixings' },
   glue: { name: 'D3 PVA wood glue', spec: '500ml bottle (water-resistant)', pack: 500, lo: 6, hi: 10, where: 'Screwfix, B&Q, Wickes', cat: 'Fixings' },
   discs: { name: 'Sanding discs, 125mm hook-and-loop', spec: 'Mixed pack of 50: 80, 120, 180 grit', pack: 50, lo: 10, hi: 16, where: 'Screwfix, Toolstation, B&Q', cat: 'Finishing' },
